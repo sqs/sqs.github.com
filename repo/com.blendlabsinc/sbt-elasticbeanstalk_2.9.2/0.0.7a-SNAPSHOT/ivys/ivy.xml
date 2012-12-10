@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
-	<info organisation="com.blendlabsinc" module="sbt-elasticbeanstalk_2.9.2" revision="0.0.7a-SNAPSHOT" status="integration" publication="20121209184537">
+	<info organisation="com.blendlabsinc" module="sbt-elasticbeanstalk_2.9.2" revision="0.0.7a-SNAPSHOT" status="integration" publication="20121209190310">
 		<description>
 		sbt-elasticbeanstalk
 		</description>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
-	<info organisation="com.blendlabsinc" module="sbt-elasticbeanstalk-plugin" revision="0.0.7a-SNAPSHOT" status="integration" publication="20121209190310" e:scalaVersion="2.9.2" e:sbtVersion="0.12">
+	<info organisation="com.blendlabsinc" module="sbt-elasticbeanstalk-plugin" revision="0.0.7b-SNAPSHOT" status="integration" publication="20121209202833" e:scalaVersion="2.9.2" e:sbtVersion="0.12">
 		<description>
 		sbt-elasticbeanstalk-plugin
 		</description>
@@ -24,7 +24,7 @@
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-sbt" name="sbt" rev="0.12.1" conf="provided->default(compile)"/>
-		<dependency org="com.blendlabsinc" name="sbt-elasticbeanstalk-core_2.9.2" rev="0.0.7a-SNAPSHOT" conf="compile->default(compile)"/>
+		<dependency org="com.blendlabsinc" name="sbt-elasticbeanstalk-core_2.9.2" rev="0.0.7b-SNAPSHOT" conf="compile->default(compile)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.9.2" conf="provided->default(compile)"/>
 		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.1.1" conf="compile->default(compile)"/>
 		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.1.1" conf="compile->default(compile)"/>
