@@ -25,9 +25,6 @@
   </properties>
 
   <build>
-    <sourceDirectory>src/main/scala</sourceDirectory>
-    <testSourceDirectory>src/test/scala</testSourceDirectory>
-
     <plugins>
 
       <plugin>
@@ -52,16 +49,23 @@
 
       <!-- Compile Scala sources -->
       <plugin>
-        <groupId>net.alchim31.maven</groupId>
-        <artifactId>scala-maven-plugin</artifactId>
-        <version>3.1.2</version>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.15.2</version>
+        <executions>
+          <execution>
+            <id>compileTests</id>
+            <phase>test-compile</phase>
+            <goals> <goal>testCompile</goal> </goals>
+          </execution>
+          <execution>
+            <id>compileSources</id>
+            <phase>process-resources</phase>
+            <goals> <goal>compile</goal> </goals>
+          </execution>
+        </executions>
         <configuration>
-          <recompileMode>incremental</recompileMode>
-          <args>
-            <arg>-unchecked</arg>
-            <arg>-deprecation</arg>
-            <arg>-Xlint</arg>
-          </args>
+          <displayCmd>true</displayCmd>
         </configuration>
       </plugin>
 
