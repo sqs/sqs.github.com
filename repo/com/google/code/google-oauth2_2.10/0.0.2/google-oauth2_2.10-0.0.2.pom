@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.google.code</groupId>
+    <artifactId>google-oauth2_2.10</artifactId>
+    <packaging>jar</packaging>
+    <description>google-oauth2</description>
+    <version>0.0.2</version>
+    <name>google-oauth2</name>
+    <organization>
+        <name>com.google.code</name>
+    </organization>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.10.0-RC1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.oauth.core</groupId>
+            <artifactId>oauth</artifactId>
+            <version>20090825</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code</groupId>
+            <artifactId>java-gmail-imap</artifactId>
+            <version>1.4.4-gm-ext-0.5</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>oauthmaven</id>
+            <name>oauth maven</name>
+            <url>http://oauth.googlecode.com/svn/code/maven/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
