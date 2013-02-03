@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Tue Nov 06 20:12:55 PST 2012
+avro-scala_2.10-1.7.2-SNAPSHOT.pom>=
+avro-scala_2.10-1.7.2-SNAPSHOT-sources.jar>=
+avro-scala_2.10-1.7.2-SNAPSHOT.jar>=

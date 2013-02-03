@@ -1,0 +1,127 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.apache.avro</groupId>
+    <artifactId>avro-toplevel</artifactId>
+    <version>1.7.2-BLEND003</version>
+    <relativePath>../../</relativePath>
+  </parent>
+
+  <artifactId>avro-scala_2.10</artifactId>
+  <packaging>jar</packaging>
+
+  <name>Apache Avro Scala</name>
+  <url>http://avro.apache.org</url>
+  <description>Avro parent Scala project</description>
+
+  <properties>
+    <scala.version>2.10.0-RC2</scala.version>
+    <junit.version>4.10</junit.version>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <id>add-test-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>add-test-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>${basedir}/src/test/resources/testdata</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Compile Scala sources -->
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+        <version>2.15.2</version>
+        <executions>
+          <execution>
+            <id>compileTests</id>
+            <phase>test-compile</phase>
+            <goals> <goal>testCompile</goal> </goals>
+          </execution>
+          <execution>
+            <id>compileSources</id>
+            <phase>process-resources</phase>
+            <goals> <goal>compile</goal> </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <displayCmd>true</displayCmd>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <reporting>
+  </reporting>
+
+  <dependencies>
+
+    <dependency>
+    	<groupId>org.scala-lang</groupId>
+    	<artifactId>scala-library</artifactId>
+    	<version>${scala.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>commons-io</groupId>
+    	<artifactId>commons-io</artifactId>
+    	<version>2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-core-asl</artifactId>
+      <version>1.8.8</version>
+    </dependency>
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>1.8.8</version>
+    </dependency>
+    <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.6</version>
+    </dependency>
+
+
+    <!-- Testing dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scalatest</groupId>
+      <artifactId>scalatest_2.10.0-RC2</artifactId>
+      <version>2.0.M4-B2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
