@@ -8,12 +8,12 @@
   <parent>
     <groupId>org.apache.avro</groupId>
     <artifactId>avro-toplevel</artifactId>
-    <version>1.7.3-20130205</version>
+    <version>1.7.3</version>
     <relativePath>../../</relativePath>
   </parent>
 
   <artifactId>avro-scala_2.10</artifactId>
-  <packaging>jar</packaging>
+   <version>1.7.3-20130205</version>  <packaging>jar</packaging>
 
   <name>Apache Avro Scala</name>
   <url>http://avro.apache.org</url>
@@ -127,7 +127,7 @@
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-core-asl</artifactId>
+      <artifactId>jaB1;3402;0cckson-core-asl</artifactId>
       <version>1.8.8</version>
     </dependency>
     <dependency>
